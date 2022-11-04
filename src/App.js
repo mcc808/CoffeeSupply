@@ -3,14 +3,17 @@ import './App.css';
 import NavBar from './components/navBar';
 import SideBar from './components/sideBar';
 import Footer from './components/footer';
+import Catalog from './pages/catalog';
 
 function App() {
   return (
     <div>
-      <NavBar></NavBar>
-      <SideBar></SideBar>
-      <Footer></Footer>
-      <h1>Hello React!!!</h1>
+     <NavBar></NavBar>
+
+     <Catalog></Catalog>
+    
+     <Footer></Footer>
+      
     </div>
   );
 }

@@ -1,3 +1,7 @@
+.navbar {
+    border: 1px solid gray;
+}
+
 .navbar h1{
     color: red;
 }
