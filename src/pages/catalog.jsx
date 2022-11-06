@@ -1,17 +1,36 @@
 import Product from "../components/product";
 import "./catalog.css"
+import {useEffect} from 'react';
+import DataService from "../services/dataService";
+import { useState } from 'react';
 
 function Catalog(){
+    let[products, setProducts] = useState([]);
+
+    //arrow function
+    const loadCatalog = () => {
+        let service = new DataService();
+        let prods = service.getCatalog();
+        setProducts(prods);
+    };
+
+    //exec when the component is displayed
+    useEffect(() => {
+        loadCatalog();
+     }, []);
+
     return(
     <div>
         <h1>Catalog</h1>
-        <Product></Product>
-        <Product></Product>
-        <Product></Product>
-        <Product></Product>
-        <Product></Product>
-        <Product></Product>
-    </div>);
+        <h4>We have {products.length} products</h4>
+        
+        {products.map((prod) => (
+        
+        <Product data={prod} /> ))}
+        
+        
+    </div>
+    );
 }
 
 export default Catalog; 
