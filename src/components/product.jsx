@@ -10,7 +10,8 @@ function Product(props){
 
             <h5>{props.data.title}</h5>
 
-            <label>${props.data.price}</label>
+            <h6>{props.data.desc}</h6>
+
             <label>${props.data.price}</label>
 
             <QuantityPicker/>

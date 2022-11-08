@@ -20,9 +20,9 @@ function Catalog(){
      }, []);
 
     return(
-    <div>
-        <h1>Catalog</h1>
-        <h4>We have {products.length} products</h4>
+    <div className="wrapper">
+        <h1 className="a">Catalog</h1>
+        <h4 className="b">(Select from {products.length} products)</h4>
         
         {products.map((prod) => (
         
