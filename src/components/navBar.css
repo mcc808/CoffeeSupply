@@ -1,7 +1,9 @@
 .navbar {
-    border: 1px solid gray;
+    border: 1px solid black;
 }
 
 .navbar h1{
     color: red;
 }
+
+

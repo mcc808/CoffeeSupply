@@ -5,11 +5,17 @@
     margin-left: 10px;
     margin-bottom: 15px;
     text-align: center;
-    border-radius: 6px;
-    border: 1px solid #6a6a6a;
-}
+
+}   
 
 .product img{
     width: 230px;
     height: 230px;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 45px;
+}
+
+.price{
+    font-weight: bold;
 }
