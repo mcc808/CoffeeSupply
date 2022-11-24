@@ -61,53 +61,24 @@ const Admin = () => {
                     <h5>Register Coupon Codes</h5>
 
                     <div className="my-control">
-
-
+                        <label>Code</label>
+                        <input type="text" />
                     </div>
 
+                    <div className="my-control">
+                        <label>Discount</label>
+                        <input type="number" />
+                    </div>
 
-
-
-
-
-
-
+                    <div className="my-control">
+                        <button className="btn btn-dark">Save Coupon</button>
+                    </div>
 
                 </div>
 
-
-
-
-
-
-
-
-
-
             </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
-
-
 
     ); 
 };

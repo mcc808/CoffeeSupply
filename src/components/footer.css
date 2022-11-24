@@ -7,11 +7,5 @@
     font-weight: bold;
 }
 .footer div{
-    flex: 1;
-    
-}
-footer .name{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
-    text-align: right;
+    flex: 1; 
 }

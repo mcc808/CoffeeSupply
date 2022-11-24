@@ -1,0 +1,45 @@
+.admin .content {
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+}
+
+.admin .products-form {
+    flex: 3;
+    border: 1px solid #ebebec;
+    border-radius: 6px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.admin .coupons-form {
+    flex: 3;
+    border: 1px solid #ebebec;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding: 15px;
+}
+
+.admin h5 {
+    text-align: left;
+    color: rgb(13, 47, 80);
+}
+
+.my-control {
+    margin-bottom: 10px;
+    margin-top: 15px;
+    display: block;
+}
+
+.my-control label {
+    display: inline-block;
+    width: 75px;
+    text-align: left;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.my-control input {
+    flex: 1;
+}
+
