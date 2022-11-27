@@ -30,7 +30,7 @@ const Admin = () => {
     };
 
     const productValChange = (e) => {  //e = event information
-        let name = e.target.value;
+        let name = e.target.name;
         let value = e.target.value;
         
         //copy, modify the copy, set the copy back
@@ -41,7 +41,7 @@ const Admin = () => {
 
     //same as above
     const couponValChange = (e) => {
-        let name = e.target.value;
+        let name = e.target.name;
         let value = e.target.value;
 
         let copy = {...couponCode};
