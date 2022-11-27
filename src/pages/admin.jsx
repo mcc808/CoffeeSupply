@@ -6,12 +6,27 @@ import Product from './../components/product';
 const Admin = () => {
     const[product, setProduct] = useState({});
 
+    const [allProducts, setAllProducts] = useState([]);
+
+    const[couponCode, setCouponCode] = useState({});
+
+    const[allCoupons, setAllCoupons] = useState([]);
+
     const saveProduct = () => {
         console.log(product);
+
+        let copy = [...allProducts];
+        copy.push(product);
+        setAllProducts(copy); 
     };
 
     const saveCoupon = () => {
-        console.log("Save Coupon");
+        console.log(couponCode);
+
+        // add the coupon to the allCoupons array
+        let copy = [...allCoupons];
+        copy.push(couponCode);
+        setAllCoupons(copy); 
     };
 
     const productValChange = (e) => {  //e = event information
@@ -23,6 +38,15 @@ const Admin = () => {
         copy[name] = value;
         setProduct(copy);
     };
+
+    const couponValChange = (e) => {
+        let name = e.target.value;
+        let value = e.target.value;
+
+        let copy = {...couponCode};
+        copy[name] = value;
+        setCouponCode(copy);
+    }
 
     return(
         <div className="admin">
@@ -44,17 +68,23 @@ const Admin = () => {
 
                     <div className="my-control">
                         <label>Category</label>
-                        <input name="category" type="text"/>
+                        <input name="category" onBlur={productValChange} type="text"/>
                     </div>
 
                     <div className="my-control">
                         <label>Price</label>
-                        <input name="price" type="text"/>
+                        <input name="price" onBlur={productValChange} type="text"/>
                     </div>
 
                     <div className="my-control center">
                        <button onClick={saveProduct} className="btn btn-sm btn-dark">Save Product</button>
                     </div>
+
+                    <hr  />
+
+                    <ul>
+                        {allProducts.map((p) =>(<li key={p.title}>{p.title} - ${parseFloat(p.price).toFixed(2)}</li>))}
+                    </ul>
                 </div>
 
                 <div className="coupons-form">
@@ -62,17 +92,25 @@ const Admin = () => {
 
                     <div className="my-control">
                         <label>Code</label>
-                        <input type="text" />
+                        <input name="code" onBlur={couponValChange} type="text" />
                     </div>
 
                     <div className="my-control">
                         <label>Discount</label>
-                        <input type="number" />
+                        <input name="discount" onBlur={couponValChange} type="number" />
                     </div>
 
-                    <div className="my-control">
-                        <button className="btn btn-dark">Save Coupon</button>
+                    <div className="my-control center">
+                        <button onClick={saveCoupon} className="btn btn-dark">Save Coupon</button>
                     </div>
+
+                    <hr  />
+
+                    <h5>Valid Coupon Codes</h5>
+
+                    <ul>
+                        {allCoupons.map(c => <li key={c.code}>{c.code} - {c.discount}</li>)}
+                    </ul>
 
                 </div>
 
