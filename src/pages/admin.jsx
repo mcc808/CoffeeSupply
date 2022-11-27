@@ -39,6 +39,7 @@ const Admin = () => {
         setProduct(copy);
     };
 
+    //same as above
     const couponValChange = (e) => {
         let name = e.target.value;
         let value = e.target.value;
