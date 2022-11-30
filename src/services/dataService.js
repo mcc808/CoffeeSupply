@@ -13,7 +13,7 @@ const catalog = [
         _id: "12555lpqa",
         title: "Filters",
         desc: "Pack of 50 standard filters as needed. ",
-        price: 7.99,
+        price: 6.50,
         category: "supply",
         image:"filters.jpg"
     },
@@ -22,7 +22,7 @@ const catalog = [
         _id: "12809xcwe",
         title: "Mixer",
         desc: "Top-notch equipment for quick service.",
-        price: 15.85,
+        price: 25.85,
         category: "equipment",
         image:"mixer.jpg"
     },
@@ -40,7 +40,7 @@ const catalog = [
         _id: "90233tyor",
         title: "Grinder",
         desc: "Essential for fast production.",
-        price: 20.33,
+        price: 40.99,
         category: "equipment",
         image:"grinder.jpg"
     },
@@ -49,7 +49,7 @@ const catalog = [
         _id: "67851hjdk",
         title: "Station",
         desc: "Stay organized at all times.",
-        price: 12.59,
+        price: 10.99,
         category: "equipment",
         image:"station.jpg"
     },
