@@ -43,9 +43,8 @@ const cart = useContext(DataContext).cart;
 
       </ul>
       <form className="d-flex" role="search">
-        <Link className='btn btn-outline-success' to="/cart">
-         <span className="badge text-bg-dark">{cart.length}</span>
-          View Cart 
+        <Link className='btn btn-outline-secondary' to="/cart">
+         View Cart <h7><span className="badge text-bg-dark">{cart.length}</span></h7>
         </Link>
       </form>
     </div>
