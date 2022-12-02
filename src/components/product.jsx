@@ -7,12 +7,13 @@ import { useContext } from 'react';
 
 const Product = (props) => {
     const addProd = useContext(DataContext).addProductToCart;
+    const [quantity, setQuantity] = useState(1);
 
     const handleAdd = () => {
-        addProd(props.data); 
+        //call the context function
+        let prodForCart = {...props.data, quantity: quantity};
+        addProd(prodForCart); 
     };
-
-    const [quantity, setQuantity] = useState(1);
 
     const handleQuantityChange = (qty) => {;
     console.log("Quantity Change", qty);

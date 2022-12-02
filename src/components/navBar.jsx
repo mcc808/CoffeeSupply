@@ -3,10 +3,23 @@ import DataContext from '../state/dataContext';
 import { useContext } from 'react';
 import {Link} from 'react-router-dom';
 import Catalog from './../pages/catalog';
+import Product from './product';
 
 
 function NavBar(){
 const cart = useContext(DataContext).cart;
+
+const countProducts = () => {
+  let total = 0; 
+
+  for(let i=0; i < cart.length; i++){
+    
+    const prod = cart[i];
+    total  += prod.quantity
+  }
+
+  return total;
+};
 
     return(
         <nav className="navbar navbar-expand-lg bg-light">
@@ -44,7 +57,7 @@ const cart = useContext(DataContext).cart;
       </ul>
       <form className="d-flex" role="search">
         <Link className='btn btn-outline-secondary' to="/cart">
-         View Cart <h7><span className="badge text-bg-dark">{cart.length}</span></h7>
+         View Cart <h7><span className="badge text-bg-dark">{countProducts()}</span></h7>
         </Link>
       </form>
     </div>
