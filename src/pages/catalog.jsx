@@ -22,7 +22,7 @@ function Catalog(){
     return(
     <div className="wrapper">
         <h1 className="a">Catalog</h1>
-        <h4 className="b">(Select from {products.length} products)</h4>
+        <h4 className="b1">(Select from {products.length} products)</h4>
         
         {products.map((prod) => (
         

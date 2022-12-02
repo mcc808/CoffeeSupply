@@ -20,10 +20,11 @@ const Cart = () => {
       };
 
     return (
-        <div className="cart">
-            <h1>Your cart</h1>
-            <h4>You have {countProducts()} products in your cart</h4>
-        
+        <div className="wrapper">
+            
+            <h1 className="a">Your cart</h1>
+            <h4 className="b">(You have {countProducts()} products in your cart)</h4>
+           
             <div className="products">
                 <ul>
                     {cart.map(p => <CartProduct key={p._id} data={p}  />)}
