@@ -9,6 +9,7 @@ const CartProduct = (props) => {
     };
 
     return (
+
         <div className="cart-product">
             <img src={'/images/' + props.data.image} alt=""  />
 
@@ -27,3 +28,10 @@ const CartProduct = (props) => {
 };
 
 export default CartProduct; 
+
+
+/*<ul>
+<label>Price</label>
+<label>Qty</label>
+<label>Total</label>
+</ul>*/
