@@ -22,7 +22,7 @@ const CartProduct = (props) => {
             <label>{props.data.price.toFixed(2)}</label>
             <label>{props.data.quantity}</label>
             <label>{getTotal()}</label>
-            
+           
         </div>
     )
 };

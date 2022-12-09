@@ -14,10 +14,11 @@
     object-fit: fill;
 }
 
-.cart-product .descrption{
+.cart-product .description{
     flex: 4;
 }
 
 .cart-product label{
     flex: 1;
 }
+
